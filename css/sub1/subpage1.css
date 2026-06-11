@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --red: #ff0000;
   --blue: #1473e6;
@@ -47,7 +39,7 @@ body {
 /* ────────────────────────────
    NAV
 ──────────────────────────── */
-nav {
+.sub-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,13 +63,12 @@ nav {
   height: 34px;
 }
 
-.nav-logo-text {
-  font-size: 13px;
-  font-weight: 700;
-  color: #111;
+.nav-logo-img {
+  width: 30%;
 }
 
 .nav-links {
+  margin-right: auto;
   display: flex;
   gap: 28px;
   list-style: none;
@@ -126,7 +117,7 @@ nav {
 /* ────────────────────────────
    HERO
 ──────────────────────────── */
-.hero {
+.sub-hero {
   position: relative;
   height: 580px;
   background: #0a0a0a;
@@ -285,7 +276,7 @@ nav {
   }
 }
 
-.hero-content {
+.sub-hero-content {
   position: relative;
   z-index: 10;
   text-align: center;
@@ -302,19 +293,19 @@ nav {
   text-transform: uppercase;
 }
 
-.hero-title {
+.sub-hero-title {
   font-size: 58px;
   font-weight: 900;
   line-height: 1.05;
   margin-bottom: 20px;
 }
 
-.hero-title em {
+.sub-hero-title em {
   font-style: normal;
   color: var(--orange);
 }
 
-.hero-sub {
+.sub-hero-sub {
   font-size: 16px;
   color: #ccc;
   margin-bottom: 36px;
@@ -322,14 +313,21 @@ nav {
   font-weight: 300;
 }
 
+/* ── Hero CTA 버튼 그룹 ── */
+.hero-cta-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .hero-cta {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: var(--blue);
-  color: #fff;
-  padding: 16px 40px;
-  border-radius: 4px;
+  background: #ffffff;
+  color: #111;
+  padding: 16px 44px;
+  border-radius: 50px;
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
@@ -337,11 +335,58 @@ nav {
   font-family: "Noto Sans KR", sans-serif;
   border: none;
   cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .hero-cta:hover {
-  background: var(--blue-dark);
+  background: #f0f0f0;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ── 영상보기 버튼 ── */
+.hero-video-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  padding: 0;
+}
+
+.hero-video-btn:hover {
+  opacity: 0.8;
+}
+
+.hero-video-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #111;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.hero-video-btn:hover .hero-video-icon {
+  background: #222;
+}
+
+.hero-video-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+  margin-left: 3px; /* 시각적 중앙 보정 */
 }
 
 .hero-cta-sub {
@@ -700,7 +745,6 @@ nav {
 }
 
 .plans-grid {
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
@@ -743,7 +787,7 @@ nav {
   background: var(--purple);
 }
 
-.plan-type {
+.sub-plan-type {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 4px;
@@ -817,7 +861,7 @@ nav {
   color: var(--purple);
 }
 
-.plan-btn {
+.sub-plan-btn {
   width: 100%;
   padding: 13px;
   border-radius: 6px;
@@ -831,22 +875,22 @@ nav {
   transition: all 0.15s;
 }
 
-.plan-btn:hover {
+.sub-plan-btn:hover {
   background: var(--blue);
   color: #fff;
 }
-.plan-btn.featured-btn {
+.sub-plan-btn.featured-btn {
   background: var(--blue);
   color: #fff;
 }
-.plan-btn.featured-btn:hover {
+.sub-plan-btn.featured-btn:hover {
   background: var(--blue-dark);
 }
-.plan-btn.purple-btn {
+.sub-plan-btn.purple-btn {
   border-color: var(--purple);
   color: var(--purple);
 }
-.plan-btn.purple-btn:hover {
+.sub-plan-btn.purple-btn:hover {
   background: var(--purple);
   color: #fff;
 }
@@ -894,12 +938,12 @@ nav {
   transition: all 0.15s;
 }
 
-.faq-cat.active {
+.faq-cat.sub-active {
   background: #f0f4ff;
   color: var(--blue);
   font-weight: 700;
 }
-.faq-cat:hover:not(.active) {
+.faq-cat:hover:not(.sub-active) {
   background: #f5f5f5;
 }
 
@@ -965,65 +1009,154 @@ nav {
 /* ────────────────────────────
    FOOTER
 ──────────────────────────── */
-footer {
-  background: #2c2c2c;
-  color: #aaa;
+.sub-footer {
+  background: #f5f5f5;
+  color: #333;
   padding: 48px 40px 32px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-main {
+  display: flex;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  align-items: flex-start;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
-  max-width: 1100px;
-  margin: 0 auto 32px;
+  flex: 1;
 }
 
 .footer-col h4 {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
-  color: #fff;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
+  color: #111;
+  margin-bottom: 14px;
+  letter-spacing: 0;
 }
 
 .footer-col a {
   display: block;
-  font-size: 12px;
-  color: #888;
+  font-size: 13px;
+  color: #444;
   text-decoration: none;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  transition: color 0.15s;
 }
 
 .footer-col a:hover {
-  color: #ccc;
+  color: #111;
 }
 
-.footer-bottom {
-  border-top: 1px solid #444;
-  padding-top: 24px;
+/* ── 푸터 우측: 로고 + SNS ── */
+.footer-brand {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  min-width: 220px;
+  padding-left: 32px;
 }
 
-.footer-bottom p {
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo-icon {
+  width: 28px;
+  height: 28px;
+
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   font-size: 11px;
-  color: #666;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+}
+
+.footer-logo-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.3px;
+}
+
+.footer-sns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-sns a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.15s;
+}
+
+.footer-sns a:hover {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+/* ── 푸터 하단 ── */
+.sub-footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-legal {
   display: flex;
-  gap: 16px;
-  font-size: 11px;
+  gap: 20px;
+  font-size: 12px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .footer-legal a {
-  color: #666;
+  color: #555;
   text-decoration: none;
+  transition: color 0.15s;
 }
+
 .footer-legal a:hover {
-  color: #aaa;
+  color: #111;
+}
+
+.footer-legal .legal-divider {
+  color: #ccc;
+  font-size: 10px;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #888;
+  text-align: right;
+  width: 100%;
 }

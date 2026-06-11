@@ -27,23 +27,9 @@
     <!-- ────────────────────────────
        NAV
   ──────────────────────────── -->
-    <nav aria-label="글로벌 내비게이션">
+    <nav class="sub-nav" aria-label="글로벌 내비게이션">
       <div class="nav-logo">
-        <svg
-          viewBox="0 0 34 34"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <rect width="34" height="34" rx="4" fill="#FF0000" />
-          <path
-            d="M19.5 7L28 27H23L21 22H14L12 27H7L15.5 7H19.5Z"
-            fill="white"
-          />
-          <path d="M15.5 18H19.5L17.5 12.5L15.5 18Z" fill="#FF0000" />
-        </svg>
-        <span class="nav-logo-text">Creative Cloud</span>
+    <img class="nav-logo-img" src="asset/logo.png" alt="logo">
       </div>
 
       <ul class="nav-links">
@@ -60,7 +46,7 @@
       </div>
     </nav>
 
-    <section class="hero" aria-label="히어로 섹션">
+    <section class="sub-hero" aria-label="히어로 섹션">
       <!-- 배경 영상 자리 (실제 영상으로 교체) -->
       <div class="hero-video-bg" aria-hidden="true">
         <video class="hero-video" autoplay loop muted playsinline>
@@ -69,21 +55,26 @@
       </div>
 
       <!-- 메인 카피 -->
-      <div class="hero-content">
+      <div class="sub-hero-content">
         <p class="hero-eyebrow">Adobe Creative Cloud</p>
-        <h1 class="hero-title">
+        <h1 class="sub-hero-title">
           상상을 넘어<br />
           <em>창작의 새로운</em><br />
           차원으로
         </h1>
-        <p class="hero-sub">
+        <p class="sub-hero-sub">
           모든 도구가 하나로 연결된 Creative Cloud<br />
           아이디어에서 완성까지, 더 빠르고 강력하게
         </p>
-        <button class="hero-cta" id="heroCta">
-          <i class="ti ti-bolt" aria-hidden="true"></i>
-          지금 무료 체험 시작
-        </button>
+        <div class="hero-cta-group">
+          <button class="hero-cta" id="heroCta">무료 체험하기</button>
+          <a href="#" class="hero-video-btn" aria-label="소개 영상 보기">
+            <span class="hero-video-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+            영상보기
+          </a>
+        </div>
         <p class="hero-cta-sub">
           7일 무료 · 언제든 취소 가능 · 신용카드 필요 없음
         </p>
@@ -344,7 +335,7 @@
           <!-- 개인 -->
           <div class="plan-card">
             <div class="plan-badge">개인</div>
-            <div class="plan-type">Creative Cloud 전체</div>
+            <div class="sub-plan-type">Creative Cloud 전체</div>
             <div class="plan-who">개인 사용자를 위한 사용료</div>
             <div class="plan-price-old">₩ 48,000 / 월</div>
             <div class="plan-price">₩ 30,000 <span>/ 월</span></div>
@@ -366,13 +357,13 @@
                 <i class="ti ti-check" aria-hidden="true"></i>Adobe Express 포함
               </li>
             </ul>
-            <button class="plan-btn">구매하기</button>
+            <button class="sub-plan-btn">구매하기</button>
           </div>
 
           <!-- 학생 (featured) -->
           <div class="plan-card featured" aria-label="추천 플랜">
             <div class="plan-badge student">🎓 학생 · 교사 최저가</div>
-            <div class="plan-type">Creative Cloud 전체</div>
+            <div class="sub-plan-type">Creative Cloud 전체</div>
             <div class="plan-who">학생임을 고지하시면</div>
             <div class="plan-price-old">₩ 99,000 / 월</div>
             <div class="plan-price">₩ 29,800 <span>/ 월</span></div>
@@ -400,13 +391,13 @@
                 ><strong>70% 할인 혜택</strong>
               </li>
             </ul>
-            <button class="plan-btn featured-btn">구매하기</button>
+            <button class="sub-plan-btn featured-btn">구매하기</button>
           </div>
 
           <!-- 기업 -->
           <div class="plan-card">
             <div class="plan-badge biz">기업</div>
-            <div class="plan-type">Creative Cloud for Teams</div>
+            <div class="sub-plan-type">Creative Cloud for Teams</div>
             <div class="plan-who">2인 이상 비즈니스 환경</div>
             <div class="plan-price-old">₩ 99,000 / 월</div>
             <div class="plan-price">₩ 29,800 <span>/ 월 / 사용자</span></div>
@@ -434,7 +425,7 @@
                 지원
               </li>
             </ul>
-            <button class="plan-btn purple-btn">구매하기</button>
+            <button class="sub-plan-btn purple-btn">구매하기</button>
           </div>
         </div>
         <!-- /.plans-grid -->
@@ -454,7 +445,7 @@
           <!-- 카테고리 탭 -->
           <div class="faq-cats" role="tablist" aria-label="FAQ 카테고리">
             <button
-              class="faq-cat active"
+              class="faq-cat sub-active"
               data-cat="all"
               role="tab"
               aria-selected="true"
@@ -599,62 +590,94 @@
     <!-- ────────────────────────────
        FOOTER
   ──────────────────────────── -->
-    <footer role="contentinfo">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>제품</h4>
-          <a href="#">Photoshop</a>
-          <a href="#">Illustrator</a>
-          <a href="#">Premiere Pro</a>
-          <a href="#">After Effects</a>
-          <a href="#">모든 제품 보기</a>
+    <footer class="sub-footer" role="contentinfo">
+      <div class="footer-main">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>제품</h4>
+            <a href="#">Photoshop</a>
+            <a href="#">Illustrator</a>
+            <a href="#">Premiere Pro</a>
+            <a href="#">After Effects</a>
+            <a href="#">모든 제품 보기</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>리소스</h4>
+            <a href="#">튜토리얼</a>
+            <a href="#">블로그</a>
+            <a href="#">커뮤니티</a>
+            <a href="#">다운로드</a>
+            <a href="#">교육 및 이벤트</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>지원</h4>
+            <a href="#">도움말 센터</a>
+            <a href="#">계정 관리</a>
+            <a href="#">청구 및 결제</a>
+            <a href="#">뉴스룸</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>회사</h4>
+            <a href="#">Adobe 소개</a>
+            <a href="#">채용 정정복</a>
+            <a href="#">뉴스룸</a>
+            <a href="#">투자자 정보</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>구매</h4>
+            <a href="#">플랜 및 가격</a>
+            <a href="#">기업용 솔루션</a>
+            <a href="#">학생 할인</a>
+            <a href="#">공공기관용</a>
+          </div>
         </div>
 
-        <div class="footer-col">
-          <h4>리소스</h4>
-          <a href="#">튜토리얼</a>
-          <a href="#">블로그</a>
-          <a href="#">커뮤니티</a>
-          <a href="#">다운로드</a>
-          <a href="#">교육 및 이벤트</a>
-        </div>
-
-        <div class="footer-col">
-          <h4>지원</h4>
-          <a href="#">도움말 센터</a>
-          <a href="#">계정 관리</a>
-          <a href="#">문의 및 콜백</a>
-          <a href="#">서비스 상태</a>
-          <a href="#">뉴스룸</a>
-        </div>
-
-        <div class="footer-col">
-          <h4>회사</h4>
-          <a href="#">Adobe 소개</a>
-          <a href="#">채용 정보</a>
-          <a href="#">뉴스룸</a>
-          <a href="#">투자자 정보</a>
-        </div>
-
-        <div class="footer-col">
-          <h4>구매</h4>
-          <a href="#">플랜 및 가격</a>
-          <a href="#">기업용 솔루션</a>
-          <a href="#">학생 할인</a>
-          <a href="#">공공기관용</a>
+        <!-- 우측: Adobe 로고 + SNS -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon" aria-hidden="true">
+              
+            </div>
+            <span class="footer-logo-text">Adobe</span>
+          </div>
+          <div class="footer-sns" aria-label="소셜 미디어">
+            <a href="#" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="X (Twitter)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#f5f5f5"/></svg>
+            </a>
+          </div>`
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p>Copyright © 2025 Adobe. All rights reserved.</p>
+      <div class="sub-footer-bottom">
         <div class="footer-legal">
           <a href="#">개인정보 보호</a>
+          <span class="legal-divider">|</span>
           <a href="#">사용 약관</a>
+          <span class="legal-divider">|</span>
           <a href="#">쿠키 환경 설정</a>
+          <span class="legal-divider">|</span>
+          <a href="#">회사 약관</a>
         </div>
+        <p class="footer-copyright">Copyright © 2026 Adobe. All rights reserved.</p>
       </div>
     </footer>
 
-    <script src="main.js"></script>
+
   </body>
 </html>
